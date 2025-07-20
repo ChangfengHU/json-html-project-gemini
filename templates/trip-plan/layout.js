@@ -69,7 +69,23 @@ const tripPlanLayout = {
     blocks: [
         { id: "routeTitle", matcher: key => key === 'routeTitle', renderer: window.renderEngine.element, mapping: { tag: 'div', className: 'route-plan-title' }, next: ['overview'] },
         { id: "overview", matcher: key => key === 'overview', renderer: tripPlanRenderers.overview, mapping: { title: { tag: 'div', className: 'trip-plan-overview', staticText: '行程总览' }, fields: [ { jsonKey: 'days', className: 'overview-item', icon: { tag: 'i', className: 'iconfont iconxj-tianshu overview-item-icon' }, label: { tag: 'span', className: 'overview-item-label', staticText: '天数：' }, value: { tag: 'span', className: 'overview-item-text' } }, { jsonKey: 'play', className: 'overview-item', icon: { tag: 'i', className: 'iconfont iconxj-youwan overview-item-icon' }, label: { tag: 'span', className: 'overview-item-label', staticText: '游玩：' }, value: { tag: 'span', className: 'overview-item-text' } }, { jsonKey: 'budget', className: 'overview-item', icon: { tag: 'i', className: 'iconfont iconxj-yusuan overview-item-icon' }, label: { tag: 'span', className: 'overview-item-label', staticText: '预算：' }, value: { tag: 'span', className: 'overview-item-text' } } ] }, next: ['days'] },
-        { id: "days", matcher: key => key === 'days', renderer: tripPlanRenderers.days, mapping: { overview: { tag: 'div', className: 'trip-plan-overview route-plan-overview', staticText: '线路概览' }, itemProduct: { container: { className: 'plan-pro' }, img: { className: 'plan-pro-img' }, info: { className: 'plan-pro-info' }, name: { className: 'plan-pro-name' }, subProductContainer: { className: 'sub-product-list'}, subProduct: { className: 'sub-product-item' } } }, next: ['tips']},
+        { id: "days", matcher: key => key === 'days', renderer: tripPlanRenderers.days, mapping: { overview: { tag: 'div', className: 'trip-plan-overview route-plan-overview', staticText: '线路概览' }, itemProduct: { container: { className: 'plan-pro' }, img: { className: 'plan-pro-img' }, info: { className: 'plan-pro-info' }, name: { className: 'plan-pro-name' }, subProductContainer: { className: 'sub-product-list'}, subProduct: { className: 'sub-product-item' } } }, next: ['tips'],
+          // 精心设计的静态图谱，反映了模板的完整潜力
+          graph: [
+            { name: '线路概览标题' },
+            { name: '每日概要链接 (循环)' },
+            { name: '每日详情 (循环)', children: [
+                { name: '头部 (日期/标题)' },
+                { name: '行程项 (循环)', children: [
+                    { name: '时间与介绍' },
+                    { name: '关联产品', children: [
+                        { name: '产品主图与名称'},
+                        { name: '子产品列表 (循环)' }
+                    ] }
+                ] }
+            ] }
+          ]
+        },
         { id: "tips", matcher: key => key === 'tips', renderer: tripPlanRenderers.titledBlock, mapping: { title: { tag: 'div', className: 'trip-plan-overview route-plan-overview', staticText: '&#x2757; 注意事项' }, content: { tag: 'div', className: 'plan-other-info' } }, next: ['foodMap'] },
         { id: "foodMap", matcher: key => key === 'foodMap', renderer: tripPlanRenderers.titledBlock, mapping: { title: { tag: 'div', className: 'trip-plan-overview route-plan-overview', staticText: '&#x1F372; 美食地图' }, content: { tag: 'div', className: 'plan-other-info' } }, next: [] }
     ]

@@ -1,6 +1,6 @@
 /**
  * @file app.js
- * @description 核心渲染引擎与应用逻辑 (v7.1 - 语法修复版)
+ * @description 核心渲染引擎与应用逻辑 (v8.1 - 语法修复最终版)
  */
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -91,56 +91,74 @@ document.addEventListener('DOMContentLoaded', () => {
         return graph;
     }
 
-    // 6. 流处理器
+    // 6. 增量更新的流处理器
     class StreamProcessor {
         constructor(registry, loader) {
             this.registry = registry;
             this.loader = loader;
             this.reset();
         }
-        reset() { this.state = { currentLayout: null, lastProcessedBlock: null, nextPossibleNodes: [], htmlOutput: '', completedJson: '' }; }
+        reset() {
+            this.state = { currentLayout: null, lastProcessedBlock: null, nextPossibleNodes: [], completedJson: '' };
+            document.getElementById('html-preview').innerHTML = '';
+            document.getElementById('html-source').textContent = '';
+        }
         async process(jsonChunk) {
-            this.reset();
             this.state.completedJson = completeJson(jsonChunk);
             let data;
             try {
                 data = JSON.parse(this.state.completedJson);
             } catch (e) {
                 this.state.currentLayout = { name: 'JSON解析失败' };
-                this.updateUI();
+                this.updateStatusUI();
                 return;
             }
 
-            try {
-                await this.loader.load(data.type);
-            } catch (error) {
-                this.state.currentLayout = { name: `布局加载失败: ${data.type}` };
-                this.updateUI();
-                return;
+            if (!this.state.currentLayout || this.state.currentLayout.name !== data.type) {
+                 try {
+                    await this.loader.load(data.type);
+                } catch (error) {
+                    this.state.currentLayout = { name: `布局加载失败: ${data.type}` };
+                    this.updateStatusUI();
+                    return;
+                }
+                const layout = this.registry.findLayoutFor(data.type);
+                if (!layout) {
+                    this.state.currentLayout = { name: '未找到匹配的布局' };
+                    this.updateStatusUI();
+                    return;
+                }
+                this.state.currentLayout = layout;
             }
 
-            const layout = this.registry.findLayoutFor(data.type);
-            if (!layout) {
-                this.state.currentLayout = { name: '未找到匹配的布局' };
-                this.updateUI();
-                return;
-            }
-            this.state.currentLayout = layout;
-
+            const layout = this.state.currentLayout;
             const dataKeys = Object.keys(data);
+            let fullHtmlSource = '';
+
             layout.blocks.forEach(block => {
                 const matchedKey = dataKeys.find(key => block.matcher(key));
                 if (matchedKey) {
+                    let blockHtml = '';
                     try {
-                        const htmlFragment = block.renderer(data[matchedKey], block.mapping);
-                        this.state.htmlOutput += htmlFragment;
+                        blockHtml = block.renderer(data[matchedKey], block.mapping);
                     } catch (error) {
-                        this.state.htmlOutput += `<div class="render-error">渲染块 '${block.id}' 时出错。</div>`;
+                        blockHtml = `<div class="render-error">渲染块 '${block.id}' 时出错。</div>`;
                     }
+                    
+                    const wrapperId = `wrapper-${block.id}`;
+                    let wrapper = document.getElementById(wrapperId);
+                    if (!wrapper) {
+                        wrapper = document.createElement('div');
+                        wrapper.id = wrapperId;
+                        document.getElementById('html-preview').appendChild(wrapper);
+                    }
+                    wrapper.innerHTML = blockHtml;
+                    fullHtmlSource += blockHtml;
                     this.state.lastProcessedBlock = block;
                 }
             });
 
+            this.state.nextPossibleNodes = [];
             if (this.state.lastProcessedBlock) {
                 const lastBlock = this.state.lastProcessedBlock;
                 const isArrayBlock = Array.isArray(data[lastBlock.id]);
@@ -153,13 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            this.updateUI();
+            this.updateStatusUI(fullHtmlSource, data);
         }
 
-        updateUI() {
-            const { currentLayout, lastProcessedBlock, nextPossibleNodes, htmlOutput } = this.state;
-            document.getElementById('html-preview').innerHTML = htmlOutput;
-            document.getElementById('html-source').textContent = htmlOutput;
+        updateStatusUI(htmlSource, data) {
+            const { currentLayout, lastProcessedBlock, nextPossibleNodes } = this.state;
+            if(htmlSource !== undefined) document.getElementById('html-source').textContent = htmlSource;
             document.getElementById('completed-json-source').textContent = this.state.completedJson;
             document.getElementById('current-layout').textContent = currentLayout ? currentLayout.name : '-';
             document.getElementById('current-node').textContent = lastProcessedBlock ? lastProcessedBlock.id : '-';
@@ -169,11 +186,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 7. DOM 操作
-    const jsonInput = document.getElementById('json-input');
     const convertBtn = document.getElementById('convert-btn');
-    const processor = new StreamProcessor(window.templateRegistry, layoutLoader);
+    const streamBtn = document.getElementById('stream-btn');
+    // Expose the processor to the window object so streamer.js can call it directly
+    window.processor = new StreamProcessor(window.templateRegistry, layoutLoader);
 
     convertBtn.addEventListener('click', async () => {
-        await processor.process(jsonInput.value);
+        window.processor.reset(); // Manual conversion should always reset
+        await window.processor.process(jsonInput.value);
     });
+
+    // Expose a specific function for streamer to start a new session
+    window.startStreaming = () => window.processor.reset();
 });

@@ -29,6 +29,46 @@ p {
     margin-bottom: 2rem;
 }
 
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#stream-btn, #convert-btn {
+    flex-grow: 1;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#stream-btn { background-color: #28a745; }
+#stream-btn:hover { background-color: #218838; }
+#convert-btn { background-color: #007bff; }
+#convert-btn:hover { background-color: #0056b3; }
+
+
 .main-content {
     display: grid;
     grid-template-columns: 1fr 1fr;

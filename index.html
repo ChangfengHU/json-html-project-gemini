@@ -10,13 +10,31 @@
 <body>
     <div class="container">
         <h1>JSON to HTML 实时转换</h1>
-        <p>在下面的文本框中输入或粘贴您的 JSON 数据（可以是片段），然后点击“转换”按钮。</p>
+        <p>选择一个示例，然后使用“流式输入”或“一次性转换”来查看效果。</p>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="example-select">选择示例:</label>
+                <select id="example-select">
+                    <option value="trip-plan">行程规划</option>
+                    <option value="park-plan">园区内规划</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="speed-slider">流式速度 (ms/char):</label>
+                <input type="range" id="speed-slider" min="10" max="500" value="50">
+                <span id="speed-value">50ms</span>
+            </div>
+        </div>
 
         <div class="main-content">
             <div class="input-section">
                 <h2>输入 JSON</h2>
-                <textarea id="json-input" placeholder="在这里输入不完整的 JSON..."></textarea>
-                <button id="convert-btn">转换</button>
+                <textarea id="json-input" placeholder="点击“流式输入”或在此处手动粘贴..."></textarea>
+                <div class="button-group">
+                    <button id="stream-btn">流式输入</button>
+                    <button id="convert-btn">一次性转换</button>
+                </div>
 
                 <h2>补全后的JSON</h2>
                 <pre><code id="completed-json-source" class="source-card"></code></pre>
@@ -45,5 +63,6 @@
     <!-- Core App and Config -->
     <script src="public/js/config.js"></script>
     <script src="public/js/app.js"></script>
+    <script src="public/js/streamer.js"></script>
 </body>
 </html>
