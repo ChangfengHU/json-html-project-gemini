@@ -185,3 +185,14 @@
     color: #555;
     margin-bottom: 5px;
 }
+
+/* --- Error Block --- */
+.render-error {
+    background-color: #ffebee;
+    border: 1px solid #e57373;
+    color: #c62828;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+    font-weight: bold;
+}

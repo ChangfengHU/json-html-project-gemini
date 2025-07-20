@@ -1,0 +1,42 @@
+{
+  "type": "园区内规划",
+  "routeTitle": "西湖核心景区半日游路线",
+  "overview": {
+    "duration": "约4-5小时",
+    "theme": "经典与人文",
+    "suggested_for": "首次来访游客、摄影爱好者"
+  },
+  "stops": [
+    {
+      "stopNum": "第一站",
+      "stopName": "断桥残雪",
+      "description": "作为西湖的标志性景点，从这里开启环湖之旅。冬日雪后景色尤其著名，但四季皆宜。",
+      "estimated_time": "30分钟"
+    },
+    {
+      "stopNum": "第二站",
+      "stopName": "平湖秋月",
+      "description": "沿白堤前行，此处是临湖赏月的最佳地点之一，视野开阔，可以远眺孤山和湖心亭。",
+      "estimated_time": "45分钟"
+    },
+    {
+      "stopNum": "第三站",
+      "stopName": "曲院风荷",
+      "description": "夏季荷花盛开，是西湖赏荷的最佳去处。园内亭台楼阁，曲径通幽，充满诗情画意。",
+      "estimated_time": "60分钟"
+    },
+    {
+      "stopNum": "第四站",
+      "stopName": "苏堤春晓",
+      "description": "漫步于苏堤之上，感受六桥烟柳的江南韵味。无论是步行还是骑行，都是一种享受。",
+      "estimated_time": "75分钟"
+    },
+    {
+      "stopNum": "第五站",
+      "stopName": "雷峰塔",
+      "description": "作为西湖全景的制高点，登塔可以俯瞰整个西湖的壮丽景色，尤其以“雷峰夕照”闻名。",
+      "estimated_time": "60分钟"
+    }
+  ],
+  "tips": "1. 建议穿舒适的步行鞋.\n2. 苏堤较长，可以考虑租用自行车.\n3. 雷峰塔登塔需单独购票，建议提前查看开放时间."
+}

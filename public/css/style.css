@@ -102,10 +102,21 @@ pre {
     margin: 0;
 }
 
-code#html-source {
+code.source-card {
     display: block;
     white-space: pre-wrap;
     word-wrap: break-word;
     font-family: "Courier New", Courier, monospace;
     font-size: 14px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    textarea#json-input {
+        height: 250px;
+    }
 }
