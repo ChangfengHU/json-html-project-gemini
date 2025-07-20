@@ -142,7 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     try {
                         blockHtml = block.renderer(data[matchedKey], block.mapping);
                     } catch (error) {
-                        blockHtml = `<div class="render-error">渲染块 '${block.id}' 时出错。</div>`;
+                        // 渲染出错时返回空字符串，避免在UI上显示错误提示
+                        blockHtml = ''; 
+                        console.error(`渲染块 '${block.id}' 时出错:`, error); // 在控制台记录错误，方便调试
                     }
                     
                     const wrapperId = `wrapper-${block.id}`;
