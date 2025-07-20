@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to HTML Converter</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/theme.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JSON to HTML 实时转换</h1>
+        <p>在下面的文本框中输入或粘贴您的 JSON 数据（可以是片段），然后点击“转换”按钮。</p>
+
+        <div class="main-content">
+            <div class="input-section">
+                <h2>输入 JSON</h2>
+                <textarea id="json-input" placeholder="在这里输入不完整的 JSON..."></textarea>
+                <button id="convert-btn">转换</button>
+
+                <h2>补全后的JSON</h2>
+                <pre><code id="completed-json-source" class="source-card"></code></pre>
+            </div>
+
+            <div class="output-section">
+                <h2>状态信息</h2>
+                <div id="status-info" class="status-card">
+                    <p><strong>当前布局:</strong> <span id="current-layout">-</span></p>
+                    <p><strong>当前节点:</strong> <span id="current-node">-</span></p>
+                    <p><strong>预测下一个节点:</strong> <span id="next-node">-</span></p>
+                </div>
+
+                <h2>渲染效果</h2>
+                <div id="html-preview" class="preview-card"></div>
+
+                <h2>HTML 源码</h2>
+                <pre><code id="html-source" class="source-card"></code></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="public/js/app.js"></script>
+</body>
+</html>

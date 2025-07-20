@@ -1,0 +1,187 @@
+/* --- Theme for Dynamically Rendered Content --- */
+
+/* General Layout */
+.route-plan-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.trip-plan-overview {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #34495e;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.plan-other-info {
+    background-color: #fdfdfd;
+    border-left: 4px solid #007bff;
+    padding: 15px;
+    margin-top: 10px;
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+
+.plan-fgx {
+    border-top: 1px dashed #ccc;
+    margin: 40px 0;
+}
+
+/* Overview Section */
+.overview-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.overview-item-icon {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 1.2em;
+}
+
+.overview-item-label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Days Section */
+.trip-plan-day {
+    display: inline-block;
+    background-color: #e9f5ff;
+    border: 1px solid #bde0ff;
+    border-radius: 15px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.trip-plan-day .day-num {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.day-item-header {
+    display: flex;
+    align-items: center;
+    background-color: #34495e;
+    color: white;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    margin-top: 20px;
+}
+
+.day-item-num {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.day-item-num .day-title {
+    font-size: 1em;
+    line-height: 1;
+}
+
+.day-item-num .day-sort {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.day-item-info {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.day-item-main {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    padding: 20px;
+}
+
+.day-item-name {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.item-circle {
+    margin-right: 15px;
+}
+
+.big-circle {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: 3px solid #007bff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.small-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+.day-item-content .day-item-time {
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.day-item-content .day-item-intro {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Product Block */
+.plan-pro {
+    display: flex;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #eee;
+}
+
+.plan-pro-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.plan-pro-info .plan-pro-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.sub-product-list {
+    margin-top: 10px;
+    border-top: 1px solid #e9ecef;
+    padding-top: 10px;
+}
+
+.sub-product-item {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}

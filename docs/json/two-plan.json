@@ -1,0 +1,413 @@
+{
+  "type": "行程规划",
+  "routeTitle": "杭州二日游行程规划",
+  "overview": {
+    "days": "2天1晚",
+    "play": "自然与文化探索",
+    "budget": "约1000-1500元/人"
+  },
+  "days": [
+    {
+      "dayNum": "Day 01",
+      "dayTitle": "西湖与环湖文化体验",
+      "items": [
+        {
+          "time": "08:00-09:30",
+          "intro": "抵达杭州，前往酒店办理入住手续并放下行李。",
+          "product": {
+            "productId": "",
+            "productCode": "",
+            "productName": "酒店推荐",
+            "productNickName": "",
+            "linkMobileImg": "",
+            "summary": "",
+            "latitudeLongitude": "",
+            "priceShow": "",
+            "detailsUrl": "",
+            "subtitle": "",
+            "labels": "",
+            "productDetailList": []
+          }
+        },
+        {
+          "time": "10:00-12:00",
+          "intro": "参观西湖景区，欣赏湖光山色，漫步苏堤。",
+          "product": {
+            "productId": 63904,
+            "productCode": "park2025052019475305236",
+            "productName": "印象西湖",
+            "productNickName": "印象西湖",
+            "linkMobileImg": "https://xxsc.lotsmall.cn/image/20250520/951be36662a8402aa2db879328db22a3.jpg",
+            "summary": "",
+            "latitudeLongitude": "120.146101,30.279095",
+            "priceShow": 0.01,
+            "detailsUrl": "https://test-aliwap.lotsmall.cn/detail/ticket/65294/park2025052019475305236?m_id=14152&channelCode=C2025071419315258955&promoteMedium=MCP",
+            "subtitle": "印象西湖",
+            "labels": null,
+            "productDetailList": [
+              {
+                "productId": 300918,
+                "productCode": "MP2025062517383597988",
+                "productName": "测试加购0626",
+                "price": 1.0
+              },
+              {
+                "productId": 300916,
+                "productCode": "MP2025062515431574699",
+                "productName": "测试日库存0625",
+                "price": 1.0
+              },
+              {
+                "productId": 300835,
+                "productCode": "MP2025062314362086718",
+                "productName": "烤龙测试--无限库存",
+                "price": null
+              }
+            ]
+          }
+        },
+        {
+          "time": "10:00-12:00",
+          "intro": "参观西湖景区，欣赏湖光山色，漫步苏堤。",
+          "product": {
+            "productId": 63904,
+            "productCode": "park2025052019475305236",
+            "productName": "印象西湖",
+            "productNickName": "印象西湖",
+            "linkMobileImg": "https://xxsc.lotsmall.cn/image/20250520/951be36662a8402aa2db879328db22a3.jpg",
+            "summary": "",
+            "latitudeLongitude": "120.146101,30.279095",
+            "priceShow": 0.01,
+            "detailsUrl": "https://test-aliwap.lotsmall.cn/detail/ticket/65294/park2025052019475305236?m_id=14152&channelCode=C2025071419315258955&promoteMedium=MCP",
+            "subtitle": "印象西湖",
+            "labels": null,
+            "productDetailList": [
+              {
+                "productId": 300918,
+                "productCode": "MP2025062517383597988",
+                "productName": "测试加购0626",
+                "price": 1.0
+              },
+              {
+                "productId": 300916,
+                "productCode": "MP2025062515431574699",
+                "productName": "测试日库存0625",
+                "price": 1.0
+              },
+              {
+                "productId": 300835,
+                "productCode": "MP2025062314362086718",
+                "productName": "烤龙测试--无限库存",
+                "price": null
+              }
+            ]
+          }
+        },
+        {
+          "time": "10:00-12:00",
+          "intro": "参观西湖景区，欣赏湖光山色，漫步苏堤。",
+          "product": {
+            "productId": 63904,
+            "productCode": "park2025052019475305236",
+            "productName": "印象西湖",
+            "productNickName": "印象西湖",
+            "linkMobileImg": "https://xxsc.lotsmall.cn/image/20250520/951be36662a8402aa2db879328db22a3.jpg",
+            "summary": "",
+            "latitudeLongitude": "120.146101,30.279095",
+            "priceShow": 0.01,
+            "detailsUrl": "https://test-aliwap.lotsmall.cn/detail/ticket/65294/park2025052019475305236?m_id=14152&channelCode=C2025071419315258955&promoteMedium=MCP",
+            "subtitle": "印象西湖",
+            "labels": null,
+            "productDetailList": [
+              {
+                "productId": 300918,
+                "productCode": "MP2025062517383597988",
+                "productName": "测试加购0626",
+                "price": 1.0
+              },
+              {
+                "productId": 300916,
+                "productCode": "MP2025062515431574699",
+                "productName": "测试日库存0625",
+                "price": 1.0
+              },
+              {
+                "productId": 300835,
+                "productCode": "MP2025062314362086718",
+                "productName": "烤龙测试--无限库存",
+                "price": null
+              }
+            ]
+          }
+        },
+        {
+          "time": "12:00-13:30",
+          "intro": "在西湖边的餐厅享用午餐，品尝杭州特色菜。",
+          "product": {
+            "productId": 7387,
+            "productCode": "eatery2025052121113165773",
+            "productName": "测试餐馆1",
+            "productNickName": null,
+            "linkMobileImg": "https://xxsc.lotsmall.cn/image/20250521/246a94b036b94d24960f66f2be4369ae.png",
+            "summary": "餐馆描述",
+            "latitudeLongitude": "118.201085,39.625079",
+            "priceShow": 50.0,
+            "detailsUrl": "https://test-aliwap.lotsmall.cn/detail/repast/7489/eatery2025052121113165773?m_id=14152&channelCode=C2025071419315258955&promoteMedium=MCP",
+            "tradingArea": "西湖商圈",
+            "categoryName": "其他美食",
+            "collectFlag": false,
+            "productDetailList": []
+          }
+        },
+        {
+          "time": "14:00-17:00",
+          "intro": "游览套娃景区，感受独特的文化氛围。",
+          "product": {
+            "productId": 63908,
+            "productCode": "park2025052117063015994",
+            "productName": "套娃景区",
+            "productNickName": "套娃景区",
+            "linkMobileImg": "https://xxsc.lotsmall.cn/image/20250521/91423ce5e7cf4af8898939b63900bde4.jpg",
+            "summary": "",
+            "latitudeLongitude": "120.151571,30.279848",
+            "priceShow": 1.0,
+            "detailsUrl": "https://test-aliwap.lotsmall.cn/detail/ticket/65298/park2025052117063015994?m_id=14152&channelCode=C2025071419315258955&promoteMedium=MCP",
+            "subtitle": "套娃景区",
+            "labels": null,
+            "productDetailList": [
+              {
+                "productId": 300830,
+                "productCode": "MP2025062311314915167",
+                "productName": "过期1天自动核销需审核",
+                "price": 1.0
+              },
+              {
+                "productId": 300829,
+                "productCode": "MP2025062311271406845",
+                "productName": "过期1天自动核销测试票",
+                "price": 3.0
+              },
+              {
+                "productId": 300585,
+                "productCode": "MP2025061209114988823",
+                "productName": "人脸测试",
+                "price": null
+              }
+            ]
+          }
+        },
+        {
+          "time": "18:00-19:30",
+          "intro": "晚餐推荐在测试西湖餐厅享用特色美食。",
+          "product": {
+            "productId": 7397,
+            "productCode": "eatery2025062810415286018",
+            "productName": "测试西湖餐饮",
+            "productNickName": null,
+            "linkMobileImg": "https://xxsc.lotsmall.cn/image/20250620/7ccb9006ecee469099f18c3b4ca83fd3.png",
+            "summary": "",
+            "latitudeLongitude": "120.14606,30.279242",
+            "priceShow": 11.0,
+            "detailsUrl": "https://test-aliwap.lotsmall.cn/detail/repast/7509/eatery2025062810415286018?m_id=14152&channelCode=C2025071419315258955&promoteMedium=MCP",
+            "tradingArea": "",
+            "categoryName": "其他美食",
+            "collectFlag": false,
+            "productDetailList": [
+              {
+                "productId": 13420,
+                "productCode": "repast2025071611412652799",
+                "productName": "测试",
+                "price": 1.0
+              },
+              {
+                "productId": 13407,
+                "productCode": "repast2025062811514287739",
+                "productName": "测试餐券1",
+                "price": 1.0
+              },
+              {
+                "productId": 13406,
+                "productCode": "repast2025062811212883224",
+                "productName": "300券",
+                "price": 1.0
+              }
+            ]
+          }
+        },
+        {
+          "time": "20:00-21:00",
+          "intro": "返回酒店休息，准备第二天的行程。",
+          "product": {
+            "productId": "",
+            "productCode": "",
+            "productName": "酒店推荐",
+            "productNickName": "",
+            "linkMobileImg": "",
+            "summary": "",
+            "latitudeLongitude": "",
+            "priceShow": "",
+            "detailsUrl": "",
+            "subtitle": "",
+            "labels": "",
+            "productDetailList": []
+          }
+        }
+      ]
+    },
+    {
+      "dayNum": "Day 02",
+      "dayTitle": "自然与历史探索",
+      "items": [
+        {
+          "time": "08:30-09:30",
+          "intro": "早餐后，前往千岛湖秀水街水下古城，探索历史遗迹。",
+          "product": {
+            "productId": 63912,
+            "productCode": "park2025052217053670461",
+            "productName": "杭州千岛湖秀水街水下古城",
+            "productNickName": "年卡",
+            "linkMobileImg": "https://xxsc.lotsmall.cn/image/20250522/b69da9579f194607bdb25c0c73172c31.jpeg",
+            "summary": "",
+            "latitudeLongitude": "120.146101,30.279095",
+            "priceShow": 1.0,
+            "detailsUrl": "https://test-aliwap.lotsmall.cn/detail/ticket/65302/park2025052217053670461?m_id=14152&channelCode=C2025071419315258955&promoteMedium=MCP",
+            "subtitle": "年卡",
+            "labels": null,
+            "productDetailList": [
+              {
+                "productId": 301048,
+                "productCode": "MP2025070219193315114",
+                "productName": "试试看",
+                "price": 5.0
+              },
+              {
+                "productId": 301047,
+                "productCode": "MP2025070219182122064",
+                "productName": "KL测试_复制",
+                "price": 3.0
+              },
+              {
+                "productId": 300672,
+                "productCode": "MP2025061614140639784",
+                "productName": "KL测试---20250616",
+                "price": 55.0
+              }
+            ]
+          }
+        },
+        {
+          "time": "10:00-12:00",
+          "intro": "继续前往庆云山国家级自然保护区，享受大自然的清新空气。",
+          "product": {
+            "productId": 63967,
+            "productCode": "park2025070911464948693",
+            "productName": "庆云山国家级自然保护区",
+            "productNickName": "KCT分时景区",
+            "linkMobileImg": "https://xxsc.lotsmall.cn/image/20250709/0da7fa5687444aa196346e57d73e5dc0.PNG",
+            "summary": "",
+            "latitudeLongitude": "120.146101,30.279095",
+            "priceShow": 1.0,
+            "detailsUrl": "https://test-aliwap.lotsmall.cn/detail/ticket/65355/park2025070911464948693?m_id=14152&channelCode=C2025071419315258955&promoteMedium=MCP",
+            "subtitle": "KCT分时景区",
+            "labels": null,
+            "productDetailList": [
+              {
+                "productId": 301273,
+                "productCode": "MP2025071616422927648",
+                "productName": "50-80（分时）（特殊渠道）",
+                "price": 1.0
+              },
+              {
+                "productId": 301143,
+                "productCode": "MP2025070911515074625",
+                "productName": "50-80（分时）",
+                "price": 1.0
+              },
+              {
+                "productId": 301142,
+                "productCode": "MP2025070911505375364",
+                "productName": "20-50（分时）_A",
+                "price": 3.0
+              }
+            ]
+          }
+        },
+        {
+          "time": "12:00-13:30",
+          "intro": "午餐推荐在诸暨故食享用当地特色美食。",
+          "product": {
+            "productId": 7381,
+            "productCode": "eatery2025042911172110490",
+            "productName": "诸暨故食",
+            "productNickName": null,
+            "linkMobileImg": "https://xxsc.lotsmall.cn/image/20250429/40e06b01af6044ab9a16b60fe5e9d601.jpg",
+            "summary": "餐馆描述",
+            "latitudeLongitude": "120.240316,29.697312",
+            "priceShow": 15.0,
+            "detailsUrl": "https://test-aliwap.lotsmall.cn/detail/repast/7482/eatery2025042911172110490?m_id=14152&channelCode=C2025071419315258955&promoteMedium=MCP",
+            "tradingArea": "临商商圈",
+            "categoryName": "其他美食",
+            "collectFlag": false,
+            "productDetailList": []
+          }
+        },
+        {
+          "time": "14:00-16:00",
+          "intro": "最后前往常州环球恐龙城景区，感受惊险刺激的娱乐项目。",
+          "product": {
+            "productId": 63929,
+            "productCode": "park2025061711094855686",
+            "productName": "常州环球恐龙城景区",
+            "productNickName": "恐龙园",
+            "linkMobileImg": "https://xxsc.lotsmall.cn/image/20250617/0652000d0ada4816afb2ecdb6b6395e9.jpg",
+            "summary": "",
+            "latitudeLongitude": "120.151852,30.27828",
+            "priceShow": 1.0,
+            "detailsUrl": "https://test-aliwap.lotsmall.cn/detail/ticket/65322/park2025061711094855686?m_id=14152&channelCode=C2025071419315258955&promoteMedium=MCP",
+            "subtitle": "恐龙园",
+            "labels": null,
+            "productDetailList": [
+              {
+                "productId": 300689,
+                "productCode": "MP2025061714203840965",
+                "productName": "出团单",
+                "price": 1.0
+              },
+              {
+                "productId": 300687,
+                "productCode": "MP2025061711202809426",
+                "productName": "龙-实体",
+                "price": 1.0
+              },
+              {
+                "productId": 300686,
+                "productCode": "MP2025061711133553038",
+                "productName": "龙1",
+                "price": 1.0
+              }
+            ]
+          }
+        },
+        {
+          "time": "17:00",
+          "intro": "结束两天的行程，返回酒店或返程。",
+          "product": {
+            "productId": "",
+            "productCodeName": "酒店推荐",
+            "productNickName": "",
+            "linkMobileImg": "",
+            "summary": "",
+            "latitudeLongitude": "",
+            "priceShow": "",
+            "detailsUrl": "",
+            "subtitle": "",
+            "labels": "",
+            "productDetailList": []
+          }
+        }
+      ]
+    }
+  ],
+  "tips": "1. 杭州天气多变，请随身携带雨具和防晒用品。\n2. 西湖景区人流较多，请注意保管好个人物品。\n3. 提前通过官方渠道预订门票，避免排队购票浪费时间。\n4. 餐饮推荐提前预订，避免高峰期无座位。\n5. 景区之间距离较近，建议使用公共交通或共享单车出行。",
+  "foodMap": "西湖周边推荐：测试西湖餐饮、测试餐馆1。\n千岛湖区域推荐：诸暨故食。\n其他区域推荐：测试餐饮、xb测试餐馆0418。"
+}
